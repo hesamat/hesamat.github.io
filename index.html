@@ -1,1 +1,383 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hesam Alizadeh - Personal Website</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="page-scroll">
+                <a class="navbar-brand" href="#page-top"><img class="navbar-img" src="img/profile.png" alt="My Picture">
+                    <div style="margin-top:10px;">
+                        Hesam Alizadeh
+                    </div>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about" class="btn btn-navbar">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio" class="btn btn-navbar">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact" class="btn btn-navbar">Contact</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="resume.pdf" class="btn btn-danger" style="font-size:15px; padding:12px; margin-left: 10px;">Resume <i class="fa fa-fw fa-download"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About Me</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about">
+                        As a highly driven computer scientist/software engineer, I have years of experience in applying computer science algorithms
+                        to various domains. As a motivated, innovative, energetic team player, followings are the experience,
+                        and competencies pertinent to this positions:
+                        
+                        <ul>
+                            <li> <b>Highly Effective Collaborator:</b> Strong communication skills was one of the strongest skills in
+                                my life time which made me a fabulous team player eager to learn more and expose to wide
+                                range of software tools/algorithms.
+                            </li>
+                            <li> <b>Proven Fast Learner:</b> Being a User Experience Research intern at a fast paced high technology
+                                institute, SMART Tech, made me a confident fast learner who can not only learn and apply
+                                new skills within days but capable of being innovative to add values.
+                            </li>
+                            <li> <b>Machine learning and statistical analysis knowledge:</b> I have a solid knowledge of numerous machine
+                                learning algorithms and statistical analysis obtained through the course of my post-grad
+                                studies in Machine Intelligence and Human Computer Interaction.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Recent Research Projects</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/happyFeet.png" class="portfolio-image img-responsive" alt="">
+                        <p class="project-title">HappyFeet: Embodiments for Joint Remote Dancing</p>
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/haptics.jpg" class="portfolio-image img-responsive" alt="">
+                        <p class="project-title">Haptics in Remote Collaborative Exercise Systems for Seniors</p>
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/airhockey.png" class="portfolio-image img-responsive" alt="">
+                        <p class="project-title">Automatic Calibration of An Air Hockey Robot</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="success" id="contact">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Contact</h2>
+                        <hr class="star-light">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="footer-col col-md-4 text-center">
+                        <h3>Email Address
+                        </h3>
+                        <p> Reach me at <br><a style="color:white" href="mailto:hesam.alizadeh@gmail.com">hesam.alizadeh@gmail.com</a></p>
+                    </div>
+                    <div class="footer-col col-md-4 text-center">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://ca.linkedin.com/in/hesam-alizadeh-22b7332a" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/hesamat87" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://soundcloud.com/hesam-alizadeh" class="btn-social btn-outline"><i class="fa fa-fw fa-soundcloud"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4 text-center">
+                        <h3>My Resume
+                        </h3>
+                        <p>
+                            <a href="resume.pdf" class="btn btn-danger" style="padding:12px;">Download <i class="fa fa-fw fa-download"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Hesam Alizadeh 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>HappyFeet</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/happyFeet.png" class="img-responsive img-centered" alt="">
+                            <h3>Abstract</h3>
+                            <br>
+                            <p style="text-align:left">We present HappyFeet, a dancing system designed for supporting the dancing experience of remotely
+                                located dance partners. HappyFeet uses 3D representations of dancers’ feet in a shared virtual
+                                dance space to emphasize timing and placement of feet. It has two modes of operation: a learning
+                                mode where the user can dance with pre-recorded dance lessons, and a second mode where the
+                                system provides a shared dance floor for remotely located dancers. We evaluated our system
+                                in a laboratory study where we investigated the role of the feet embodiment by comparing
+                                its’ use to a video-only condition. The feet embodiment provided our participants with a
+                                better understanding of dance moves, helped them to synchronize timing of their dance steps,
+                                and provided them with a dance space in which they could freely create dance moves with their
+                                partners</p>
+                            <ul class="list-inline item-details">
+                                <li>Conference:
+                                    <strong>Graphics Interface 2016
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>June 2016
+                                    </strong>
+                                </li>
+                                <li>DOI:
+                                    <strong><a href="http://ricelab.cpsc.ucalgary.ca/papers/alizadeh2016happyfeet">Publication</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Automatic calibration of an air hockey robot</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/airhockey.png" class="img-responsive img-centered" alt="">
+                            <h3>Abstract</h3>
+                            <br>
+                            <p style="text-align:left">In this work, we propose an algorithm which enables an air hockey playing robot to quickly adapt
+                                itself to new environments. There are a number of parameters in each environment which affect
+                                the puck's motion (e.g. coefficients of restitution). The robot should be able to estimate
+                                these parameters accurately enough in order to predict the position of the puck and to reach
+                                its goals. Our algorithm does this task well without need of a high speed camera and in a
+                                noisy environment. We implemented this algorithm on an air hockey simulator. It successfully
+                                tunes the parameters with the average number of 17.12 shots and the average error of 1.39%
+                                in its shot planning after the calibration process is done.</p>
+                            <ul class="list-inline item-details">
+                                <li>Conference:
+                                    <strong>ICRoM 2013
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>Feb 2013
+                                    </strong>
+                                </li>
+                                <li>DOI:
+                                    <strong><a href="http://dx.doi.org/10.1109/ICRoM.2013.6510090">Publication</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Haptics in Remote Collaborative Exercise Systems for Seniors</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/haptics.jpg" class="img-responsive img-centered" alt="">
+                            <h3>Abstract</h3>
+                            <br>
+                            <p style="text-align:left">Group exercise provides motivation to follow and maintain a healthy daily exercise schedule while
+                                enjoying beneficial encouragement and social support from friends and exercise partners.
+                                However, mobility and transportation issues frequently prevent seniors from engaging in group
+                                activities. To address this problem, we investigated the exercise needs of seniors and developed
+                                a prototype remote exercise system. Our system uses haptic feedback to simulate assistive
+                                pushing and pulling of limbs when exercising with a partner. We developed three distinct
+                                vibration metaphors -- constant push/pull, corrective feedback, and notification -- to convey
+                                engagement and connection between exercise partners. We conducted a preliminary evaluation
+                                of our system and our vibration metaphors to determine the validity of our design concepts.
+                                We contribute a set of lessons on the use of haptic feedback for remote group exercise.</p>
+                            <ul class="list-inline item-details">
+                                <li>Conference:
+                                    <strong>CHI 2014
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>May 2014
+                                    </strong>
+                                </li>
+                                <li>DOI:
+                                    <strong><a href="http://dx.doi.org/10.1145/2559206.2581318">Publication</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>
