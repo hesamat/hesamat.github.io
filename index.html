@@ -129,6 +129,17 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/lab.png" class="portfolio-image img-responsive" alt="">
+                        <p class="project-title">SMART Lab</p>
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
@@ -137,6 +148,19 @@
                         </div>
                         <img src="img/portfolio/happyFeet.png" class="portfolio-image img-responsive" alt="">
                         <p class="project-title">HappyFeet: Embodiments for Joint Remote Dancing</p>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/haptics.jpg" class="portfolio-image img-responsive" alt="">
+                        <p class="project-title">Haptics in Remote Collaborative Exercise Systems for Seniors</p>
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -207,7 +231,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Hesam Alizadeh 2017
+                        Copyright &copy; Hesam Alizadeh 2018
                     </div>
                 </div>
             </div>
@@ -251,14 +275,25 @@
                                 A http socket relay was implemented in Node.js to connect the two remote dancing locations. 
                                 It was used to relay the time-series representing the dance footage to the clients. 
                                 The server also has the ability to record and playback the stream.
+                                <div class="row text-center">
+                                    <div class="col-xs-12">
+                                        <img src="img/node.png" class="techlogo" width="100">
+                                    </div>
+                                </div>
                                 You can find the github repo here:
                                 <br>
                                 <strong>
                                     <a href="https://github.com/hesamat/MiddleMan">https://github.com/hesamat/MiddleMan</a>
                                 </strong>
                             </p>
+                            <br>
                             <p style="text-align:left">
                                 Client side code was written in C#/WPF. It renders a virtual dancing space on top of the remote dancer's video feed, immersing the dancer in an augmented dancing environment.
+                                <div class="row text-center">
+                                    <div class="col-xs-12">
+                                        <img src="img/wpf.png" class="techlogo" width="100">
+                                    </div>
+                                </div>
                                 You can find the github repo here:
                                 <br>
                                 <strong>
@@ -275,8 +310,8 @@
                                     <strong>June 2016
                                     </strong>
                                 </li>
-                                <li>
-                                    <strong><a href="http://ricelab.cpsc.ucalgary.ca/papers/alizadeh2016happyfeet">Publication</a>
+                                <li>DOI:
+                                    <strong><a href="https://doi.org/10.20380/GI2016.15">Publication</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -312,6 +347,16 @@
                                 noisy environment. We implemented this algorithm on an air hockey simulator. It successfully
                                 tunes the parameters with the average number of 17.12 shots and the average error of 1.39%
                                 in its shot planning after the calibration process is done.</p>
+                                <p style="text-align:left">
+                                    The simulations were implemented in Matlab. The code for robot calibration and puck tracking was written in C++ and OpenCV.
+                                    <div class="row text-center">
+                                        <div class="col-xs-12">
+                                            <img src="img/matlab.jpg" class="techlogo" width="100">
+                                            <img src="img/Cplusplus.png" class="techlogo" width="100">
+                                            <img src="img/OpenCV.png" class="techlogo" width="100">
+                                        </div>
+                                    </div>
+                                </p>
                             <ul class="list-inline item-details">
                                 <li>Conference:
                                     <strong>ICRoM 2013
@@ -333,6 +378,59 @@
             </div>
         </div>
     </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Haptics in Remote Collaborative Exercise Systems for Seniors</h2>
+                                <hr class="star-primary">
+                                <img src="img/portfolio/haptics.jpg" class="img-responsive img-centered" alt="">
+                                <h3>Abstract</h3>
+                                <br>
+                                <p style="text-align:left">In this project, we investigated the exercise needs of seniors and developed
+                                    a prototype remote exercise system. Our system uses haptic feedback to simulate assistive
+                                    pushing and pulling of limbs when exercising with a partner. We developed three distinct
+                                    vibration metaphors -- constant push/pull, corrective feedback, and notification -- to convey
+                                    engagement and connection between exercise partners. We conducted a preliminary evaluation
+                                    of our system and our vibration metaphors to determine the validity of our design concepts.
+                                    We contribute a set of lessons on the use of haptic feedback for remote group exercise.</p>
+                                <p style="text-align:left">
+                                    Client side code was written in C#/WPF.
+                                    <div class="row text-center">
+                                        <div class="col-xs-12">
+                                            <img src="img/wpf.png" class="techlogo" width="100">
+                                        </div>
+                                    </div>
+                                </p>
+                                <ul class="list-inline item-details">
+                                    <li>Conference:
+                                        <strong>CHI 2014
+                                        </strong>
+                                    </li>
+                                    <li>Date:
+                                        <strong>May 2014
+                                        </strong>
+                                    </li>
+                                    <li>DOI:
+                                        <strong><a href="http://dx.doi.org/10.1145/2559206.2581318">Publication</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -353,12 +451,20 @@
                             </p>
                             <ul class="list-inline item-details">
                             <iframe src="https://battleship57.herokuapp.com/" style="font-size:12px; border:none; transform: scale(0.85);margin-left: -95px;margin-top: -60px;" width="880" height="500"></iframe>
-                            <p style="text-align:left">
+                            <div class="row text-center">
+                                <div class="col-xs-12">
+                                    <img src="img/vue.png" class="techlogo" width="100">
+                                    <img src="img/node.png" class="techlogo" width="100">
+                                    <img src="img/heroku.png" class="techlogo" width="100">
+                                </div>
+                            </div>
+                            <p>
                                 You can find the github repo here:
                                <br>
                                <strong>
                                    <a href="https://github.com/hesamat/battleship">https://github.com/hesamat/battleship</a>
                                </strong>
+                               
                             </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -367,6 +473,50 @@
             </div>
         </div>
     </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>SMART LAB</h2>
+                                <hr class="star-primary">
+                                <img src="img/portfolio/lab.png" class="img-responsive img-centered" alt="">
+                                <p style="text-align:left"> Currently, I am employed as a full-stack developer at SMART technologies. I am a part of the LAB team. <br>
+                                    SMART LAB allows teachers to create game-based learning activities in less than 5 minutes. 
+                                    We provide customizable activities where teachers can add their own content. 
+                                    The activities can be played on multiple platforms including interactive displays, student devices, SLSO (SMART Learning Suite Online), etc.
+                                </p>
+                                <br>
+                                <p>
+                                    You can find more info about SMART LAB here:
+                                    <br>
+                                    <strong>
+                                        <a href="https://education.smarttech.com/products/smart-learning-suite/smart-lab">https://education.smarttech.com/products/smart-learning-suite/smart-lab</a>
+                                    </strong>
+                                    
+                                </p>
+                                <div class="row text-center">
+                                    <div class="col-xs-12">
+                                        <img src="img/vue.png" class="techlogo" width="100">
+                                        <img src="img/ember.jpg" class="techlogo" width="100">
+                                        <img src="img/node.png" class="techlogo" width="100">
+                                        <img src="img/java.png" class="techlogo" width="100">
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
