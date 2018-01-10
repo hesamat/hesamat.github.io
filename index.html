@@ -239,16 +239,33 @@
                             <img src="img/portfolio/happyFeet.png" class="img-responsive img-centered" alt="">
                             <h3>Abstract</h3>
                             <br>
-                            <p style="text-align:left">We present HappyFeet, a dancing system designed for supporting the dancing experience of remotely
+                            <p style="text-align:left">HappyFeet is a dancing system designed for supporting the dancing experience of remotely
                                 located dance partners. HappyFeet uses 3D representations of dancers’ feet in a shared virtual
-                                dance space to emphasize timing and placement of feet. It has two modes of operation: a learning
-                                mode where the user can dance with pre-recorded dance lessons, and a second mode where the
-                                system provides a shared dance floor for remotely located dancers. We evaluated our system
-                                in a laboratory study where we investigated the role of the feet embodiment by comparing
-                                its’ use to a video-only condition. The feet embodiment provided our participants with a
+                                dance space to emphasize timing and placement of feet. The feet embodiment provided our participants with a
                                 better understanding of dance moves, helped them to synchronize timing of their dance steps,
                                 and provided them with a dance space in which they could freely create dance moves with their
-                                partners</p>
+                                partners.
+                            </p>
+                            <br>
+                            <p style="text-align:left">
+                                A http socket relay was implemented in Node.js to connect the two remote dancing locations. 
+                                It was used to relay the time-series representing the dance footage to the clients. 
+                                The server also has the ability to record and playback the stream.
+                                You can find the github repo here:
+                                <br>
+                                <strong>
+                                    <a href="https://github.com/hesamat/MiddleMan">https://github.com/hesamat/MiddleMan</a>
+                                </strong>
+                            </p>
+                            <p style="text-align:left">
+                                Client side code was written in C#/WPF. It renders a virtual dancing space on top of the remote dancer's video feed, immersing the dancer in an augmented dancing environment.
+                                You can find the github repo here:
+                                <br>
+                                <strong>
+                                    <a href="https://github.com/hesamat/HappyFeet">https://github.com/hesamat/HappyFeet</a>
+                                </strong>
+                            </p>
+                            <br>
                             <ul class="list-inline item-details">
                                 <li>Conference:
                                     <strong>Graphics Interface 2016
@@ -258,7 +275,7 @@
                                     <strong>June 2016
                                     </strong>
                                 </li>
-                                <li>Link:
+                                <li>
                                     <strong><a href="http://ricelab.cpsc.ucalgary.ca/papers/alizadeh2016happyfeet">Publication</a>
                                     </strong>
                                 </li>
@@ -287,7 +304,7 @@
                             <img src="img/portfolio/airhockey.png" class="img-responsive img-centered" alt="">
                             <h3>Abstract</h3>
                             <br>
-                            <p style="text-align:left">In this work, we propose an algorithm which enables an air hockey playing robot to quickly adapt
+                            <p style="text-align:left">In this work, we proposed an algorithm which enables an air hockey playing robot to quickly adapt
                                 itself to new environments. There are a number of parameters in each environment which affect
                                 the puck's motion (e.g. coefficients of restitution). The robot should be able to estimate
                                 these parameters accurately enough in order to predict the position of the puck and to reach
@@ -336,6 +353,13 @@
                             </p>
                             <ul class="list-inline item-details">
                             <iframe src="https://battleship57.herokuapp.com/" style="font-size:12px; border:none; transform: scale(0.85);margin-left: -95px;margin-top: -60px;" width="880" height="500"></iframe>
+                            <p style="text-align:left">
+                                You can find the github repo here:
+                               <br>
+                               <strong>
+                                   <a href="https://github.com/hesamat/battleship">https://github.com/hesamat/battleship</a>
+                               </strong>
+                            </p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
