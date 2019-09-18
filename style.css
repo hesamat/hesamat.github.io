@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     font-family: 'Montserrat';
+    margin: 0;
 }
 .construction {
     display: flex;
