@@ -33,13 +33,13 @@
 }
 
 :root {
-  --paper: #fff8e8;
-  --ink: #2d261e;
-  --muted: #766550;
-  --accent: #c47c1c;
-  --accent-ink: #985416;
-  --hairline: #e6d4b4;
-  --card: #f6ead0;
+  --paper: #fffefa;
+  --ink: #2d2924;
+  --muted: #736d65;
+  --accent: #bf791c;
+  --accent-ink: #955817;
+  --hairline: #e4ddd4;
+  --card: #f5f1e9;
 
   --measure: 45rem;
   --canvas: 64rem;
@@ -472,6 +472,10 @@ figcaption {
 .project-card h3 a {
   color: inherit;
   text-decoration-color: var(--hairline);
+}
+
+.project-card figure {
+  margin: 1.4rem 0 1.5rem;
 }
 
 .project-card .project-context {
@@ -1009,7 +1013,7 @@ figcaption {
 }
 
 /* An open editorial layout, with a classroom note alongside the introduction. */
-:root { --canvas: 76rem; --hairline: #e1cfb0; }
+:root { --canvas: 76rem; --hairline: #e4ddd4; }
 .header-row { padding-block: 1.4rem; }
 .brand { letter-spacing: -0.035em; font-size: 1.05rem; }
 .site-nav a, .theme-toggle { font-size: .875rem; min-height: 44px; display: inline-flex; align-items: center; }
@@ -1163,6 +1167,50 @@ h1 { font-weight: 450; font-size: clamp(3rem, 6vw, 4.8rem); }
   .home-tool-grid, .project-grid { gap: 1.5rem; }
   .semester-note { margin-right: 0; }
 }
+
+:root[data-theme="dark"] {
+  --hairline: #483b31;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --hairline: #483b31;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav {
+    gap: 0;
+  }
+
+  .theme-label {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: nowrap;
+  }
+
+  .project-card h3 a,
+  .research-card h3 a,
+  .project-action,
+  .course-links a,
+  .research-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-block: 0.45rem;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .intro-accent {
+    display: inline-block;
+    white-space: nowrap;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   @keyframes page-arrival { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
   main { animation: page-arrival 420ms ease-out both; }
