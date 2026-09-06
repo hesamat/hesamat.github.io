@@ -379,6 +379,18 @@ figcaption {
   color: var(--ink);
 }
 
+.courses .code a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.courses .code a:hover {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-ink);
+  text-underline-offset: 0.25em;
+}
+
 .courses .count {
   font-family: var(--sans);
   font-size: 0.72rem;
