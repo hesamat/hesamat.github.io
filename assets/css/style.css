@@ -54,24 +54,24 @@
 :root { color-scheme: light; }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --paper: #1c1a18;
-  --ink: #eee9e1;
-  --muted: #aaa39a;
-  --accent: #d88962;
-  --accent-ink: #e5a07d;
-  --hairline: #3c3833;
-  --card: #262320;
+  --paper: #201c18;
+  --ink: #f2eadf;
+  --muted: #b7a99a;
+  --accent: #c98b67;
+  --accent-ink: #dda180;
+  --hairline: #403831;
+  --card: #2a241e;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --paper: #1c1a18;
-    --ink: #eee9e1;
-    --muted: #aaa39a;
-    --accent: #d88962;
-    --accent-ink: #e5a07d;
-    --hairline: #3c3833;
-    --card: #262320;
+    --paper: #201c18;
+    --ink: #f2eadf;
+    --muted: #b7a99a;
+    --accent: #c98b67;
+    --accent-ink: #dda180;
+    --hairline: #403831;
+    --card: #2a241e;
   }
 }
 
