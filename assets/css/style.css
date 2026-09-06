@@ -1070,6 +1070,8 @@ figcaption {
 .course-card-featured { border-top: 3px solid var(--accent); }
 .project-label, .course-code, .project-action, .coursebook-link, .course-links a { font-size: .8125rem; }
 .research-card h3 { font-size: 1.4rem; }
+.research-card h3 a { color: inherit; text-decoration: none; }
+.research-card h3 a:hover { color: var(--accent-ink); text-decoration: underline; text-decoration-color: var(--accent-ink); text-underline-offset: .2em; }
 .research-card figure img { border-radius: 0; }
 .industry-card figure a { position: absolute; inset: 0; }
 .site-footer { margin-top: 5rem; }
@@ -1092,3 +1094,78 @@ figcaption {
 .experience-companies { padding-top: 1rem; border-top: 1px solid var(--hairline); color: var(--muted); font: .875rem/1.8 var(--sans); }
 .experience-companies span { display: block; margin-bottom: .3rem; color: var(--ink); font-weight: 600; }
 .publications-heading { margin-top: 1.5rem; font: 600 .875rem/1.5 var(--sans); }
+
+/* Theme experiment: crisp surfaces, blue accents, serif display with sans prose. */
+body { font-family: var(--sans); font-size: 1rem; line-height: 1.8; }
+h1, h2, h3, h4, .intro-opening { font-family: var(--serif); }
+h1 { font-weight: 450; font-size: clamp(3rem, 6vw, 4.8rem); }
+.site-header { background: var(--paper); border-bottom: 0; }
+.header-row { position: relative; padding-block: 1.6rem; }
+.header-row::after { content: ""; position: absolute; bottom: 0; left: var(--gutter); right: var(--gutter); height: 1px; background: var(--hairline); }
+.brand { font-size: 1rem; letter-spacing: -.04em; }
+.brand::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--accent); border-radius: 50%; margin-right: .7rem; vertical-align: .1rem; }
+.site-nav { gap: .5rem; }
+.site-nav a { border-radius: 0; padding-inline: .5rem; border-bottom: 2px solid transparent; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { background: transparent; border-bottom-color: var(--accent); }
+.home-hero { grid-template-columns: minmax(0, 1.7fr) minmax(17rem, 1fr); gap: clamp(2rem, 6vw, 5.5rem); padding-block: 5rem; }
+.hero-description { font-family: var(--sans); font-size: 1.125rem; line-height: 1.8; }
+.intro-opening { font-size: clamp(3rem, 4.8vw, 4.25rem); line-height: 1.08; letter-spacing: -.035em; margin-bottom: 2rem; }
+.hero-background { font-size: 1rem; line-height: 1.8; }
+.hero-actions { margin-top: 1.8rem; }
+.button-link { border-color: var(--accent-ink); background: var(--accent-ink); color: var(--paper); border-radius: 4px; padding: .85rem 1.1rem; }
+.button-link:hover { background: var(--ink); border-color: var(--ink); }
+.semester-note { margin-top: .6rem; border: 1px solid var(--hairline); border-top: 3px solid var(--accent); background: var(--card); border-radius: 0 0 8px 8px; padding: 1.8rem; }
+.semester-note h2 { font-size: 3.2rem; }
+.note-course strong { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; }
+.note-course small { font-family: var(--sans); font-size: .875rem; line-height: 1.7; }
+.note-location, .note-foot { font-size: .8125rem; }
+.note-arrow { transition: transform 180ms ease; }
+.note-course:hover .note-arrow { transform: translate(2px, -2px); }
+.home-work { padding-top: 2rem; border-top-color: var(--hairline); }
+.section-heading h2, .home-perspective h2 { font-size: clamp(2rem, 3.5vw, 2.7rem); }
+.home-tool-grid { gap: 2.5rem; }
+.tool-feature { background: transparent; border: 0; border-top: 2px solid var(--accent); padding: 1.5rem 0; }
+.tool-feature:hover { background: transparent; }
+.tool-feature h3 { font-size: 2.75rem; }
+.tool-feature:hover h3 { color: var(--accent-ink); }
+.tool-feature p { font-size: 1rem; line-height: 1.75; }
+.tool-top .eyebrow { margin-bottom: 1.2rem; }
+.tool-bottom { font-size: .8125rem; }
+.home-perspective { gap: 3rem; }
+.home-perspective p { line-height: 1.8; }
+.personal-note { font-family: var(--serif); font-size: 1.2rem; }
+.lede { font-family: var(--serif); font-size: 1.65rem; line-height: 1.5; }
+.kicker::after { display: none; }
+.kicker { font-size: .75rem; line-height: 1.6; letter-spacing: .12em; }
+.project-card { background: transparent; border: 0; border-top: 2px solid var(--accent); padding: 1.5rem 0; }
+.project-grid { gap: 2.5rem; }
+.project-card h3 { font-size: 2.5rem; }
+.project-card > p:not(.project-label), .research-card > p:not(.project-label) { line-height: 1.75; }
+.research-grid { gap: 2rem; }
+.research-card figure { overflow: hidden; border-radius: 6px; }
+.research-card figure img { transition: transform 300ms ease; }
+.research-card:has(a:hover) figure img { transform: scale(1.025); }
+.course-card { border-radius: 0 0 8px 8px; }
+.course-card-featured { background: var(--card); }
+.course-card > p:not(.course-code, .course-links), .course-card li { line-height: 1.75; }
+.course-card h3 { font-size: 2rem; }
+.pubs li { font-size: .9375rem; line-height: 1.8; margin-bottom: 1.3rem; }
+.courses p { font-size: .9375rem; }
+.about-page > section { margin-bottom: 3rem; }
+.about-page .lede { margin-bottom: 3rem; }
+.site-footer { background: var(--card); border-top: 0; }
+@media (max-width: 900px) {
+  .home-hero { gap: 2rem; grid-template-columns: 1.3fr 1fr; }
+  .semester-note { padding: 1.4rem; }
+}
+@media (max-width: 700px) {
+  .home-hero { grid-template-columns: 1fr; padding-block: 3rem; }
+  .intro-opening { font-size: clamp(2.8rem, 10vw, 4rem); }
+  .home-tool-grid, .project-grid { gap: 1.5rem; }
+  .semester-note { margin-right: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes page-arrival { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  main { animation: page-arrival 420ms ease-out both; }
+  .button-link, .tool-feature h3 { transition: background 180ms ease, color 180ms ease, border-color 180ms ease; }
+}
