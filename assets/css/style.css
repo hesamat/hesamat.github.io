@@ -1,0 +1,507 @@
+/* ------------------------------------------------------------------
+   hesamalizadeh.com — warm editorial
+   Type: Newsreader (serif, variable) + Inter (sans, variable), self-hosted.
+   No frameworks, no build step.
+------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/newsreader-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2013-2014, U+2018-201A,
+    U+201C-201E, U+2022, U+2026, U+2039-203A, U+2044, U+2074, U+20AC, U+2122;
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/newsreader-italic-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2013-2014, U+2018-201A,
+    U+201C-201E, U+2022, U+2026, U+2039-203A, U+2044, U+2074, U+20AC, U+2122;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/inter-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2013-2014, U+2018-201A,
+    U+201C-201E, U+2022, U+2026, U+2039-203A, U+2044, U+2074, U+20AC, U+2122;
+}
+
+:root {
+  --paper: #faf7f1;
+  --ink: #26221c;
+  --muted: #6f6759;
+  --accent: #a64b2a;
+  --accent-ink: #8a3d20;
+  --hairline: #e5dccb;
+  --card: #f2ecdf;
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1b1813;
+    --ink: #eae3d5;
+    --muted: #a89f8e;
+    --accent: #d9976f;
+    --accent-ink: #e7b394;
+    --hairline: #35302a;
+    --card: #241f19;
+  }
+}
+
+/* ---------- base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.1875rem;
+  font-optical-sizing: auto;
+  line-height: 1.72;
+  text-rendering: optimizeLegibility;
+  font-synthesis-weight: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+a {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 130ms ease;
+}
+
+a:hover {
+  text-decoration-color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: 42rem;
+  margin-inline: auto;
+  padding-inline: 1.375rem;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 0.6rem 1rem;
+  z-index: 10;
+}
+
+.skip:focus {
+  left: 0;
+}
+
+/* ---------- header / footer ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.header-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-block: 1.35rem;
+}
+
+.brand {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--accent-ink);
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.site-nav a {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--accent-ink);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35em;
+}
+
+.site-footer {
+  border-top: 1px solid var(--hairline);
+  margin-top: 5.5rem;
+}
+
+.site-footer .footer-row {
+  padding-block: 2.2rem 2.8rem;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--accent-ink);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  margin: 0 0 0.7rem;
+}
+
+.colophon {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- typography ---------- */
+
+main {
+  padding-top: 0.5rem;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5.2vw, 3.15rem);
+  font-weight: 550;
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  margin: 3.2rem 0 1.6rem;
+  text-wrap: balance;
+}
+
+h1 em,
+.lede em {
+  font-style: italic;
+  color: var(--accent-ink);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 0.7rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+p {
+  margin: 0 0 1.15rem;
+}
+
+.lede {
+  font-size: 1.28rem;
+  line-height: 1.66;
+}
+
+.kicker {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  margin: 3.4rem 0 1rem;
+}
+
+.kicker::after {
+  content: "";
+  display: block;
+  width: 2.2rem;
+  border-top: 1px solid var(--accent);
+  margin-top: 0.55rem;
+  opacity: 0.6;
+}
+
+section {
+  margin-bottom: 2.6rem;
+}
+
+ul,
+ol {
+  padding-left: 1.3rem;
+}
+
+li {
+  margin-bottom: 0.55rem;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--hairline);
+  margin: 3rem 0;
+}
+
+small,
+.small {
+  font-size: 0.86em;
+  color: var(--muted);
+}
+
+/* ---------- figures ---------- */
+
+figure {
+  margin: 2.4rem 0;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--hairline);
+}
+
+figcaption {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-top: 0.65rem;
+}
+
+/* ---------- projects ---------- */
+
+.entry {
+  margin-bottom: 3.6rem;
+}
+
+.entry .meta {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin: -0.2rem 0 0.9rem;
+}
+
+.entry .meta a {
+  color: var(--muted);
+}
+
+/* ---------- course / list rows ---------- */
+
+.courses {
+  list-style: none;
+  padding: 0;
+}
+
+.courses li {
+  margin-bottom: 1.05rem;
+  padding-left: 1.3rem;
+  border-left: 2px solid var(--hairline);
+}
+
+.courses .code {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.courses .count {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  margin-left: 0.5rem;
+}
+
+.courses p {
+  margin: 0.2rem 0 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+/* ---------- publications ---------- */
+
+.pubs {
+  list-style: none;
+  padding: 0;
+}
+
+.pubs li {
+  margin-bottom: 1.15rem;
+  padding-left: 1.3rem;
+  text-indent: -1.3rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.pubs .venue {
+  font-style: italic;
+}
+
+/* ---------- now line (home) ---------- */
+
+.now {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.1rem;
+  margin: 2.8rem 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.now .label {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.home-links {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  margin-top: 2.6rem;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+}
+
+.home-links a {
+  text-decoration: none;
+  font-weight: 550;
+}
+
+.home-links a .arrow {
+  color: var(--accent-ink);
+  margin-right: 0.35rem;
+}
+
+.home-links a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-ink);
+  text-underline-offset: 0.3em;
+}
+
+/* ---------- ganjoor verse (writing page) ---------- */
+
+.verse {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 2.2rem 1.6rem 1.6rem;
+  margin: 2.6rem 0;
+}
+
+.verse .ganjoor-block-title {
+  display: none;
+}
+
+.verse .ganjoor-m1,
+.verse .ganjoor-m2 {
+  font-family: var(--serif);
+  font-size: 1.42rem;
+  line-height: 2.15;
+  text-align: center;
+  margin: 0;
+}
+
+.verse figcaption {
+  text-align: center;
+  margin-top: 1.1rem;
+}
+
+/* ---------- 404 ---------- */
+
+.lost {
+  padding-block: 4rem 2rem;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.0938rem;
+  }
+
+  .header-row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 2.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

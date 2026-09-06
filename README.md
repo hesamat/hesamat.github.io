@@ -1,27 +1,48 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
+# hesamalizadeh.com
 
-[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
+The personal website of Hesam Alizadeh — <https://hesamalizadeh.com>.
 
-## Getting Started
+A hand-written static site: plain HTML, one CSS file, self-hosted fonts.
+No build step, no framework, no client-side JavaScript. It deploys to
+GitHub Pages from this repository's `master` branch, and can be moved to
+any static host (or a VPS running nginx) by copying the folder as-is.
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-freelancer.git`
-* Fork the repo
+## Structure
 
-## Bugs and Issues
+```
+index.html            Home
+about/index.html      About
+projects/index.html   Projects
+writing/index.html    Writing
+404.html              Not-found page
+assets/css/style.css  The entire design system
+assets/fonts/         Newsreader + Inter (variable woff2, latin subset, OFL)
+assets/images/        Optimized project photographs
+CNAME                 Custom domain (hesamalizadeh.com)
+```
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/).
+## Running locally
 
-## Creator
+Any static file server from the repo root works:
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+```sh
+python3 -m http.server 8000
+# → http://localhost:8000
+```
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+## Adding a piece of writing
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+Create a directory under `writing/` with an `index.html` inside
+(copy an existing page as the template), give it a unique `<title>`
+and canonical URL, and add a link to it from `writing/index.html`.
+No rebuild needed — the page is the content.
 
-## Copyright and License
+## Notes
 
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.
+- Fonts are self-hosted subsets of [Newsreader](https://fonts.google.com/specimen/Newsreader)
+  and [Inter](https://fonts.google.com/specimen/Inter), both under the
+  SIL Open Font License.
+- The Persian verse widget on the Writing page is provided by
+  [Ganjoor](https://ganjoor.net/) and loads remotely; everything else is local.
+- Historical versions of this site (including the original 2016 website and
+  its research photographs) live in this repository's git history.
