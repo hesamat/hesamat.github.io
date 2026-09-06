@@ -33,13 +33,13 @@
 }
 
 :root {
-  --paper: #faf7f1;
-  --ink: #26221c;
-  --muted: #6f6759;
-  --accent: #a64b2a;
-  --accent-ink: #8a3d20;
-  --hairline: #e5dccb;
-  --card: #f2ecdf;
+  --paper: #fff9eb;
+  --ink: #2c241b;
+  --muted: #746554;
+  --accent: #c47718;
+  --accent-ink: #9a5310;
+  --hairline: #e6d5b8;
+  --card: #f5ead4;
 
   --measure: 45rem;
   --canvas: 64rem;
@@ -54,24 +54,24 @@
 :root { color-scheme: light; }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --paper: #1b1813;
-  --ink: #eae3d5;
-  --muted: #a89f8e;
-  --accent: #d9976f;
-  --accent-ink: #e7b394;
-  --hairline: #35302a;
-  --card: #241f19;
+  --paper: #211a13;
+  --ink: #f8ead2;
+  --muted: #c0aa8d;
+  --accent: #e3a249;
+  --accent-ink: #f0bd6f;
+  --hairline: #4b3927;
+  --card: #2d241a;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --paper: #1b1813;
-    --ink: #eae3d5;
-    --muted: #a89f8e;
-    --accent: #d9976f;
-    --accent-ink: #e7b394;
-    --hairline: #35302a;
-    --card: #241f19;
+    --paper: #211a13;
+    --ink: #f8ead2;
+    --muted: #c0aa8d;
+    --accent: #e3a249;
+    --accent-ink: #f0bd6f;
+    --hairline: #4b3927;
+    --card: #2d241a;
   }
 }
 
@@ -1009,7 +1009,7 @@ figcaption {
 }
 
 /* An open editorial layout, with a classroom note alongside the introduction. */
-:root { --canvas: 76rem; --hairline: #d9d0c1; }
+:root { --canvas: 76rem; --hairline: #e0cfaf; }
 .header-row { padding-block: 1.4rem; }
 .brand { letter-spacing: -0.035em; font-size: 1.05rem; }
 .site-nav a, .theme-toggle { font-size: .875rem; min-height: 44px; display: inline-flex; align-items: center; }
@@ -1102,8 +1102,7 @@ h1 { font-weight: 450; font-size: clamp(3rem, 6vw, 4.8rem); }
 .site-header { background: var(--paper); border-bottom: 0; }
 .header-row { position: relative; padding-block: 1.6rem; }
 .header-row::after { content: ""; position: absolute; bottom: 0; left: var(--gutter); right: var(--gutter); height: 1px; background: var(--hairline); }
-.brand { font-size: 1rem; letter-spacing: -.04em; }
-.brand::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--accent); border-radius: 50%; margin-right: .7rem; vertical-align: .1rem; }
+.brand { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; letter-spacing: -.03em; }
 .site-nav { gap: .5rem; }
 .site-nav a { border-radius: 0; padding-inline: .5rem; border-bottom: 2px solid transparent; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { background: transparent; border-bottom-color: var(--accent); }
