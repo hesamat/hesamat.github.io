@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects — Hesam Alizadeh</title>
-  <meta name="description" content="Selected projects: tools for teaching, and older research that still matters to me — remote dancing, haptics, and an air-hockey robot.">
+  <meta name="description" content="Selected work by Hesam Alizadeh across interactive data products, teaching tools, human–computer interaction, and robotics.">
   <link rel="canonical" href="https://hesamalizadeh.com/projects/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hesam Alizadeh">
   <meta property="og:title" content="Projects — Hesam Alizadeh">
-  <meta property="og:description" content="A curated selection: current research, teaching tools, and older research that still matters to me.">
+  <meta property="og:description" content="Selected work across interactive data products, teaching tools, human–computer interaction, and robotics.">
   <meta property="og:url" content="https://hesamalizadeh.com/projects/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1b1813" media="(prefers-color-scheme: dark)">
+  <script src="/assets/js/theme.js"></script>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -23,63 +24,93 @@
       <a class="brand" href="/">Hesam Alizadeh</a>
       <nav class="site-nav" aria-label="Main">
         <a href="/about/">About</a>
+        <a href="/teaching/">Teaching</a>
         <a href="/projects/" aria-current="page">Projects</a>
         <a href="/writing/">Writing</a>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme" hidden>
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span class="theme-label">Dark</span>
+        </button>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="wrap">
-    <h1>Projects</h1>
+  <main id="main" class="wrap projects-page">
+    <header class="projects-intro">
+      <h1>Projects</h1>
+      <p class="lede">Work I’m proud of—some built for classrooms, some for industry, and some to answer a research question.</p>
+    </header>
 
-    <p class="lede">A small, curated set: my recent tools, and older research that still means a lot to me.</p>
+    <section aria-labelledby="industry">
+      <h2 class="kicker" id="industry">Industry</h2>
 
-    <section aria-labelledby="recent">
-      <h2 class="kicker" id="recent">Recent</h2>
+      <article class="project-feature">
+        <a class="project-feature-visual" href="https://www.localintel.com/products/Logistics-and-Accessibility-Advantages" aria-label="View Logistics and Accessibility Advantages on Localintel">
+          <img src="/assets/images/localintel-logistics.png" alt="The Logistics and Accessibility Advantages interface, with transport-network controls beside an interactive map." width="1403" height="1469">
+        </a>
+        <div class="project-feature-copy">
+          <p class="project-label">Interactive data visualization · Front-end lead</p>
+          <h3>Logistics and Accessibility Advantages</h3>
+          <p>An embeddable data product that helps communities show how their roads, railways, airports, ports, broadband, and drive-time reach connect local businesses to wider markets.</p>
+          <p><strong>My work:</strong> I led front-end development across Localintel’s Location Advantages product family, working with UX from early Tableau prototypes to the production Angular application. I also developed reusable interface blocks that allowed each community to shape the experience around its own data.</p>
+          <p><a class="project-action" href="https://www.localintel.com/products/Logistics-and-Accessibility-Advantages">View the product <span aria-hidden="true">↗</span></a></p>
+        </div>
+      </article>
+    </section>
 
-      <div class="entry">
-        <h3><a href="https://github.com/hesamat/coursebookmd">CoursebookMD</a></h3>
-        <p class="meta">Teaching tools · JavaScript · ongoing</p>
-        <p>I write my course material as connected Markdown chapters, and I wanted the lecture and the student-facing site to come from the same document instead of diverging into slides and handouts. CoursebookMD is that tool: a scroll-and-spotlight presentation mode, syntax highlighting, math and diagrams, an auto-generated index of marked terms, and a static export for students.</p>
-        <p>It grew out of my own classrooms — my COMP 1510 Programming Methods coursebook is authored and published with it.</p>
-      </div>
+    <section aria-labelledby="teaching-tools">
+      <h2 class="kicker" id="teaching-tools">Tools for teaching</h2>
 
-      <div class="entry">
-        <h3><a href="https://github.com/hesamat/html-presentation">SlideMD</a></h3>
-        <p class="meta">Teaching tools · JavaScript · ongoing</p>
-        <p>The same idea applied to traditional decks: Markdown in, dual-window presenter view and deterministic PDF out — with PPTX import for everything the world insists on sending as PowerPoint. Slides render on a fixed 16:9 stage with code highlighting, math, and diagrams, and builds run fully offline, with no CDN dependencies.</p>
-        <p>It grew out of my own classroom as well — built for teaching COMP 7855 Software Systems.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-label">JavaScript · Ongoing</p>
+          <h3><a href="https://github.com/hesamat/coursebookmd">CoursebookMD</a></h3>
+          <p>One source for teaching and study. Connected Markdown chapters become a spotlighted lecture view and a searchable static coursebook, with code, math, diagrams, and an index built in.</p>
+          <p class="project-context">Built for my COMP 1510 Programming Methods course.</p>
+          <a class="project-action" href="https://github.com/hesamat/coursebookmd">Explore on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="project-card">
+          <p class="project-label">JavaScript · Ongoing</p>
+          <h3><a href="https://github.com/hesamat/html-presentation">SlideMD</a></h3>
+          <p>A Markdown presentation tool for the parts of teaching that still need slides: dual-window presenting, offline builds, code, math, diagrams, PPTX import, and predictable PDF export.</p>
+          <p class="project-context">Built for my COMP 7855 Software Systems course.</p>
+          <a class="project-action" href="https://github.com/hesamat/html-presentation">Explore on GitHub <span aria-hidden="true">↗</span></a>
+        </article>
       </div>
     </section>
 
     <section aria-labelledby="research-archive">
-      <h2 class="kicker" id="research-archive">Earlier research</h2>
+      <h2 class="kicker" id="research-archive">Research archive</h2>
 
-      <div class="entry">
-        <h3>HappyFeet: Embodiments for Joint Remote Dancing</h3>
-        <p class="meta">Research · Graphics Interface 2016 · <a href="https://github.com/hesamat/HappyFeet">Code</a> · <a href="https://github.com/hesamat/MiddleMan">MiddleMan relay</a></p>
-        <figure>
-          <img src="/assets/images/happyfeet.jpg" alt="A person faces a large display showing a shared virtual dance floor with two pairs of rendered 3D feet." width="975" height="716" loading="lazy">
-        </figure>
-        <p>HappyFeet let dance partners in different rooms share a floor: 3D renderings of their feet, tracked and projected into one virtual space, making timing and placement visible. In a lab study, the feet embodiment helped people understand moves, synchronize their steps, and improvise together. I built the client in C#/WPF and wrote MiddleMan, a Node.js relay that carried the time-series stream between the two sides — with recording and playback, because lab studies always need playback.</p>
-      </div>
+      <div class="research-grid">
+        <article class="research-card">
+          <figure>
+            <img src="/assets/images/happyfeet.jpg" alt="A person faces a large display showing a shared virtual dance floor with two pairs of rendered 3D feet." width="975" height="716" loading="lazy">
+          </figure>
+          <p class="project-label">Graphics Interface 2016</p>
+          <h3>HappyFeet</h3>
+          <p>A shared virtual floor for dance partners in different rooms. Live 3D feet made timing, placement, and improvisation visible across distance.</p>
+          <p class="research-links"><a href="https://github.com/hesamat/HappyFeet">Client code</a><a href="https://github.com/hesamat/MiddleMan">Relay code</a></p>
+        </article>
 
-      <div class="entry">
-        <h3>Haptics in Remote Collaborative Exercise</h3>
-        <p class="meta">Research · CHI 2014</p>
-        <figure>
-          <img src="/assets/images/haptics.jpg" alt="A person wearing a wrist-mounted haptic device stretches an arm toward a screen showing their remote exercise partner." width="1400" height="960" loading="lazy">
-        </figure>
-        <p>Group exercise motivates people, but mobility and transportation keep many seniors at home. This prototype let a remote partner's presence be felt: a wrist-worn haptic band rendered three vibration metaphors — constant push/pull, corrective feedback, and notification — standing in for the physical language of exercising together. The contribution was a set of design lessons for haptic feedback in remote group exercise.</p>
-      </div>
+        <article class="research-card">
+          <figure>
+            <img src="/assets/images/haptics.jpg" alt="A person wearing a wrist-mounted haptic device stretches an arm toward a screen showing their remote exercise partner." width="1400" height="960" loading="lazy">
+          </figure>
+          <p class="project-label">CHI 2014</p>
+          <h3>Haptics for Remote Exercise</h3>
+          <p>A wrist-worn haptic prototype that explored how remote exercise partners could communicate presence, encouragement, and movement guidance through touch.</p>
+        </article>
 
-      <div class="entry">
-        <h3>Automatic Calibration of an Air Hockey Robot</h3>
-        <p class="meta">Research · ICRoM 2013</p>
-        <figure>
-          <img src="/assets/images/airhockey.jpg" alt="Overhead view of an air hockey table with a computer-vision overlay tracking the puck." width="783" height="626" loading="lazy">
-        </figure>
-        <p>My University of Tehran master's work, in collaboration with a mechanical engineer who built the robot while I worked on the brains: a learning algorithm that lets an air-hockey robot adapt to a new table — its particular friction and bounce — from a handful of shots. In simulation it calibrated itself in about seventeen shots and planned shots to within about one percent error, no high-speed camera required. Matlab, C++, and OpenCV.</p>
+        <article class="research-card">
+          <figure>
+            <img src="/assets/images/airhockey.jpg" alt="Overhead view of an air hockey table with a computer-vision overlay tracking the puck." width="783" height="626" loading="lazy">
+          </figure>
+          <p class="project-label">ICRoM 2013</p>
+          <h3>Air-Hockey Robot</h3>
+          <p>A learning system that adapted to a table’s particular friction and bounce from a small number of shots, then used that model to plan accurate plays.</p>
+        </article>
       </div>
     </section>
   </main>

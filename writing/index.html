@@ -14,6 +14,7 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1b1813" media="(prefers-color-scheme: dark)">
+  <script src="/assets/js/theme.js"></script>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -23,13 +24,18 @@
       <a class="brand" href="/">Hesam Alizadeh</a>
       <nav class="site-nav" aria-label="Main">
         <a href="/about/">About</a>
+        <a href="/teaching/">Teaching</a>
         <a href="/projects/">Projects</a>
         <a href="/writing/" aria-current="page">Writing</a>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme" hidden>
+          <span class="theme-icon" aria-hidden="true"></span>
+          <span class="theme-label">Dark</span>
+        </button>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="wrap">
+  <main id="main" class="wrap writing-page">
     <h1>Writing</h1>
 
     <p class="lede">Essays, notes, translations, and fragments will gather here as they're ready. Nothing is published yet — this page is the room I'm preparing for them.</p>
