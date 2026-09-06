@@ -448,34 +448,6 @@ figcaption {
   text-underline-offset: 0.3em;
 }
 
-/* ---------- ganjoor verse (writing page) ---------- */
-
-.verse {
-  background: var(--card);
-  border: 1px solid var(--hairline);
-  border-radius: 8px;
-  padding: 2.2rem 1.6rem 1.6rem;
-  margin: 2.6rem 0;
-}
-
-.verse .ganjoor-block-title {
-  display: none;
-}
-
-.verse .ganjoor-m1,
-.verse .ganjoor-m2 {
-  font-family: var(--serif);
-  font-size: 1.42rem;
-  line-height: 2.15;
-  text-align: center;
-  margin: 0;
-}
-
-.verse figcaption {
-  text-align: center;
-  margin-top: 1.1rem;
-}
-
 /* ---------- 404 ---------- */
 
 .lost {
