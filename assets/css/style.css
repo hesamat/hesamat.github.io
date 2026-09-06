@@ -908,17 +908,28 @@ figcaption {
 }
 
 .experience-item h3 {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.25rem;
   font-family: var(--sans);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
-.experience-item p {
+.experience-item p:not(.experience-meta) {
   margin: 0;
   font-size: 0.98rem;
   line-height: 1.55;
+}
+
+.experience-item .experience-meta {
+  margin: 0 0 0.65rem;
+  color: var(--accent-ink);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+  line-height: 1.45;
+  text-transform: uppercase;
 }
 
 @media (min-width: 780px) {
