@@ -650,17 +650,18 @@ figcaption {
 }
 
 .teaching-history {
+  padding: 1.5rem 0 1.75rem;
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
 }
 
-.teaching-history summary {
-  padding: 1rem 0;
-  color: var(--ink);
+.history-heading {
+  margin: 0 0 1.2rem;
   font-family: var(--sans);
-  font-size: 0.85rem;
-  font-weight: 650;
-  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .past-courses {
@@ -668,7 +669,7 @@ figcaption {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem 2rem;
   margin: 0;
-  padding: 0 0 1.5rem;
+  padding: 0;
   list-style: none;
 }
 
@@ -694,8 +695,46 @@ figcaption {
 }
 
 .teaching-roots {
+  margin-top: 3rem;
+}
+
+.teaching-roots > p {
   max-width: var(--measure);
-  margin-top: 1.5rem;
+}
+
+.teaching-path {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+.teaching-stop {
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--hairline);
+}
+
+.teaching-stop .history-meta {
+  margin: 0 0 0.45rem;
+  color: var(--accent-ink);
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.teaching-stop h4 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.teaching-stop > p:not(.history-meta) {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 @media (max-width: 760px) {
@@ -711,6 +750,10 @@ figcaption {
 
   .research-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teaching-path {
+    grid-template-columns: 1fr;
   }
 }
 
