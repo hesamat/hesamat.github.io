@@ -33,13 +33,13 @@
 }
 
 :root {
-  --paper: #fff9eb;
-  --ink: #2c241b;
-  --muted: #746554;
-  --accent: #c47718;
-  --accent-ink: #9a5310;
-  --hairline: #e6d5b8;
-  --card: #f5ead4;
+  --paper: #fff8e8;
+  --ink: #2d261e;
+  --muted: #766550;
+  --accent: #c47c1c;
+  --accent-ink: #985416;
+  --hairline: #e6d4b4;
+  --card: #f6ead0;
 
   --measure: 45rem;
   --canvas: 64rem;
@@ -54,24 +54,24 @@
 :root { color-scheme: light; }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --paper: #201c18;
-  --ink: #f2eadf;
-  --muted: #b7a99a;
-  --accent: #c98b67;
-  --accent-ink: #dda180;
-  --hairline: #403831;
-  --card: #2a241e;
+  --paper: #231e1a;
+  --ink: #f0e7dc;
+  --muted: #b6a89a;
+  --accent: #c88e3a;
+  --accent-ink: #e1aa62;
+  --hairline: #483b31;
+  --card: #2d261f;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --paper: #201c18;
-    --ink: #f2eadf;
-    --muted: #b7a99a;
-    --accent: #c98b67;
-    --accent-ink: #dda180;
-    --hairline: #403831;
-    --card: #2a241e;
+    --paper: #231e1a;
+    --ink: #f0e7dc;
+    --muted: #b6a89a;
+    --accent: #c88e3a;
+    --accent-ink: #e1aa62;
+    --hairline: #483b31;
+    --card: #2d261f;
   }
 }
 
@@ -1009,7 +1009,7 @@ figcaption {
 }
 
 /* An open editorial layout, with a classroom note alongside the introduction. */
-:root { --canvas: 76rem; --hairline: #e0cfaf; }
+:root { --canvas: 76rem; --hairline: #e1cfb0; }
 .header-row { padding-block: 1.4rem; }
 .brand { letter-spacing: -0.035em; font-size: 1.05rem; }
 .site-nav a, .theme-toggle { font-size: .875rem; min-height: 44px; display: inline-flex; align-items: center; }
