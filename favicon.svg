@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#a64b2a"/>
-  <text x="32" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-style="italic" text-anchor="middle" fill="#faf7f1">H</text>
+  <style>
+    .mark { fill: #bf791c; }
+    .letter { fill: #fffefa; }
+    @media (prefers-color-scheme: dark) {
+      .mark { fill: #c88e3a; }
+      .letter { fill: #231e1a; }
+    }
+  </style>
+  <rect class="mark" width="64" height="64" rx="16"/>
+  <text class="letter" x="32" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" text-anchor="middle">H</text>
 </svg>

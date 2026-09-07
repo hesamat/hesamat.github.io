@@ -1158,6 +1158,9 @@ h1 { font-weight: 450; font-size: clamp(3rem, 6vw, 4.8rem); }
 .courses p { font-size: .9375rem; }
 .about-page > section { margin-bottom: 3rem; }
 .about-page .lede { margin-bottom: 3rem; }
+.about-research-figure { float: right; width: min(100%, 16rem); margin: .2rem 0 1.5rem 2rem; }
+.about-research-figure img { display: block; width: 100%; height: auto; }
+.about-research-figure figcaption { margin-top: .65rem; color: var(--muted); font: .78rem/1.55 var(--sans); }
 .site-footer { background: var(--card); border-top: 0; }
 @media (max-width: 900px) {
   .home-hero { gap: 2rem; grid-template-columns: 1.3fr 1fr; }
@@ -1170,6 +1173,7 @@ h1 { font-weight: 450; font-size: clamp(3rem, 6vw, 4.8rem); }
   .intro-opening { font-size: clamp(2.8rem, 10vw, 4rem); }
   .home-tool-grid, .project-grid { gap: 1.5rem; }
   .semester-note { margin-right: 0; }
+  .about-research-figure { float: none; width: 100%; max-width: 32rem; margin: 0 0 1.5rem; }
 }
 
 :root[data-theme="dark"] {
