@@ -258,7 +258,8 @@ h1 {
 }
 
 h1 em,
-.lede em {
+.lede em,
+.roots-lede em {
   font-style: italic;
   color: var(--accent-ink);
 }
@@ -682,7 +683,8 @@ figcaption {
 }
 
 .teaching-roots > p {
-  max-width: var(--measure);
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 
 .teaching-path {
@@ -1128,6 +1130,7 @@ h1 { font-weight: 450; font-size: clamp(3rem, 6vw, 4.8rem); }
 .home-perspective p { line-height: 1.8; }
 .personal-note { font-family: var(--serif); font-size: 1.2rem; }
 .lede { font-family: var(--serif); font-size: 1.65rem; line-height: 1.5; }
+.roots-lede { font-family: var(--serif); font-size: 1.45rem; line-height: 1.55; margin-bottom: 2.2rem; }
 .kicker::after { display: none; }
 .kicker { font-size: .75rem; line-height: 1.6; letter-spacing: .12em; }
 .project-card { background: transparent; border: 0; border-top: 2px solid var(--accent); padding: 1.5rem 0; }
