@@ -628,18 +628,6 @@ figcaption {
   font-weight: 650;
 }
 
-.coursebook-status {
-  display: inline-block;
-  padding: 0.35rem 0.6rem;
-  border: 1px solid var(--hairline);
-  border-radius: 999px;
-  color: var(--muted);
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 650;
-  letter-spacing: 0.04em;
-}
-
 .course-links {
   margin: 1.35rem 0 0;
 }
