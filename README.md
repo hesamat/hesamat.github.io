@@ -1,6 +1,6 @@
 # hesamalizadeh.com
 
-The personal website of Hesam Alizadeh — <https://hesamalizadeh.com>.
+The personal website of Hesam Alizadeh: <https://hesamalizadeh.com>.
 
 A hand-written static site: plain HTML, one CSS file, self-hosted fonts,
 and a small script for the light/dark theme. No build step or framework.
