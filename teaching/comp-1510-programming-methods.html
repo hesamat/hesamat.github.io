@@ -7775,31 +7775,17 @@ print(order)
 <p>A postcondition can also describe what a call leaves untouched. A function that reads a saved scoreboard can promise to leave the file unchanged, so the caller knows the read did not modify the file.</p>
 <h2 id="testing-the-contract"><span class="heading-number">25.6 </span>Testing the Contract</h2><button type="button" class="go-up-link" aria-label="Back to chapter top">▲</button>
 <p>Writing the guard down invites a question: does it actually reject what you claim? A plain <code>assert</code> checks a result. <a href="https://docs.pytest.org/en/stable/how-to/assert.html#assertions-about-expected-exceptions" rel="noopener noreferrer"><code>pytest.raises</code></a> checks the other outcome, that the call raises instead of returning.</p>
-<p><code>pytest.raises(ValueError)</code> turns “this call should raise” into a check that fails when the call quietly succeeds. The tests sit in the same file as the function for now:</p>
+<p><code>pytest.raises(ValueError)</code> turns “this call should raise” into a check that fails when the call quietly succeeds. The tests sit in the same file as the function for now, with the docstring left out for brevity:</p>
 <pre class="shiki shiki-themes github-light github-dark has-copy-button" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0" data-source="import pytest
 
 def drink_record(name: str, ounces: int = 12, shots: int = 1) -&gt; dict:
-    &quot;&quot;&quot;Return one drink record.
-
-    :param name: the drink's name
-    :param ounces: the drink's size in ounces
-    :param shots: a positive whole number of espresso shots
-    :precondition: shots is a positive whole number
-    :postcondition: the returned record holds one value for each parameter
-    :return: one drink record as a dictionary
-    :raises ValueError: if shots is not a positive whole number
-    &quot;&quot;&quot;
     if not isinstance(shots, int) or shots &lt;= 0:
         raise ValueError(f&quot;Shots must be a positive whole number, not {shots}.&quot;)
     return {&quot;name&quot;: name, &quot;ounces&quot;: ounces, &quot;shots&quot;: shots}
 
 def test_returns_record():
     assert drink_record(&quot;Latte&quot;) == {&quot;name&quot;: &quot;Latte&quot;, &quot;ounces&quot;: 12, &quot;shots&quot;: 1}
-    assert drink_record(&quot;Mocha&quot;, 16, 3) == {
-        &quot;name&quot;: &quot;Mocha&quot;,
-        &quot;ounces&quot;: 16,
-        &quot;shots&quot;: 3,
-    }
+    assert drink_record(&quot;Mocha&quot;, 16, 3) == {&quot;name&quot;: &quot;Mocha&quot;, &quot;ounces&quot;: 16, &quot;shots&quot;: 3}
 
 def test_rejects_zero_shots():
     with pytest.raises(ValueError):
@@ -7815,27 +7801,13 @@ def test_rejects_fractional_shots():
 " data-lang="python" data-info="python"><code><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> pytest</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">def</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> drink_record</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(name: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, ounces: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 12</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, shots: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) -&gt; </span><span style="color:#005CC5;--shiki-dark:#79B8FF">dict</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    """Return one drink record.</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    :param name: the drink's name</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    :param ounces: the drink's size in ounces</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    :param shots: a positive whole number of espresso shots</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    :precondition: shots is a positive whole number</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    :postcondition: the returned record holds one value for each parameter</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    :return: one drink record as a dictionary</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    :raises ValueError: if shots is not a positive whole number</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    """</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    if</span><span style="color:#D73A49;--shiki-dark:#F97583"> not</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> isinstance</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(shots, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">or</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> shots </span><span style="color:#D73A49;--shiki-dark:#F97583">&lt;=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        raise</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> ValueError</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#D73A49;--shiki-dark:#F97583">f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Shots must be a positive whole number, not </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">shots</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">."</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"name"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: name, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"ounces"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: ounces, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"shots"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: shots}</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">def</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> test_returns_record</span><span style="color:#24292E;--shiki-dark:#E1E4E8">():</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> drink_record(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Latte"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"name"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Latte"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"ounces"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">12</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"shots"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span>
-<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> drink_record(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Mocha"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">16</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">3</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">        "name"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Mocha"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">        "ounces"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">16</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">        "shots"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">3</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> drink_record(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Mocha"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">16</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">3</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"name"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Mocha"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"ounces"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">16</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"shots"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">3</span><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">def</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> test_rejects_zero_shots</span><span style="color:#24292E;--shiki-dark:#E1E4E8">():</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    with</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> pytest.raises(</span><span style="color:#005CC5;--shiki-dark:#79B8FF">ValueError</span><span style="color:#24292E;--shiki-dark:#E1E4E8">):</span></span>
