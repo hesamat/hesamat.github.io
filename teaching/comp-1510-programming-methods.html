@@ -8187,8 +8187,8 @@ for table in tables:
 <p> Programs must be written for people to read, and only incidentally for machines to execute.</p>
 <p class="admonition-cite"><em>Harold Abelson and Gerald Jay Sussman, <a href="https://sarabander.github.io/sicp/" rel="noopener noreferrer">Structure and Interpretation of Computer Programs</a>, 1985.</em></p>
 </blockquote></div>
-<p>The last chapter turned loops that build lists into comprehensions. Not every loop builds a list. One numbers the items so a person can read them, one walks two sequences in step, and one puts records in order. Python gives each job a name: enumerate, zip, and sorted with a key.</p>
-<p>The <code>sorted</code> call rests on one idea: a function is a value, and you can pass it to another function the way you pass a number or a string.</p>
+<p>The last chapter turned loops that build lists into comprehensions. Not every loop builds a list. One numbers the items so a person can read them, one walks two sequences in step, and one puts records in order. The first one you write with a counter, code that says how the loop counts, never why.</p>
+<p>This chapter hands those jobs to calls named for them: <code>enumerate</code> numbers, <code>zip</code> pairs, and <code>sorted</code> orders records once a function tells it which field matters. That works because a function is a value, and you can pass it to another function the way you pass a number or a string.</p>
 <h2 id="counting-positions-with-enumerate"><span class="heading-number">27.1 </span>Counting Positions with <code>enumerate</code></h2><button type="button" class="go-up-link" aria-label="Back to chapter top">▲</button>
 <p>A numbered stop list begins with a counter you look after yourself:</p>
 <pre class="shiki shiki-themes github-light github-dark has-copy-button has-run-button has-edit-button" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0" data-source="stations = [&quot;Waterfront&quot;, &quot;Commercial-Broadway&quot;, &quot;Edmonds&quot;]
